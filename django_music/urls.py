@@ -20,6 +20,8 @@ from django.urls import include, path
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('accounts/', include('registration.backends.simple.urls')),
+    path('', album_views.list_albums, name='list_albums'),
+
 ]
 
 if settings.DEBUG:
