@@ -1,12 +1,12 @@
 from django import forms
-from .models import Albums
+from .models import Album
 
 
 class AlbumForm(forms.ModelForm):
     class Meta:
-        model = Albums
+        model = Album
         fields = [
-            'name',
+            'title',
             'artist',
             'release',
             'genre',
