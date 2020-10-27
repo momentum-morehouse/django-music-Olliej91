@@ -26,7 +26,7 @@ def edit_album(request, pk):
     if request.method == 'GET':
         form = AlbumForm(instance=album)
     else:
-            form = AlbumForm(data=request.POST, isinstance=album)
+            form = AlbumForm(data=request.POST, instance=album)
             if form.is_valid():
                 form.save()
                 return redirect(to='list_albums')
